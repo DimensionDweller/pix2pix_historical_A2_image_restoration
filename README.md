@@ -66,7 +66,7 @@ The model leverages a unique combination of losses to achieve realistic and high
 
  $$L_{\text{Generator}} = E_{z \sim P_{z}}[\log (1 - D(G(z)))]$$
 
- The GAN loss ensures that the generated images are not only realistic but also indistinguishable from real images.
+The GAN loss ensures that the generated images are not only realistic but also indistinguishable from real images.
 
 
 ### Weighted L1 Loss
@@ -139,8 +139,5 @@ The provided code serves as a solid foundation for anyone interested in diving i
 
 ## Sources
 
-(Include any relevant papers, links, or acknowledgments related to the project.)
-
----
-
-Feel free to modify or add any sections as needed. Let me know if there are any specific details you would like to include!
+- Isola, P., Zhu, J.-Y., Zhou, T., & Efros, A. A. (2017). **Image-to-Image Translation with Conditional Adversarial Networks**. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR). [arXiv:1611.07004](https://arxiv.org/abs/1611.07004) (Original Pix2Pix paper)
+- Li, Y., & Liu, M.-Y. (2016). **Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks**. In European Conference on Computer Vision (ECCV). [arXiv:1604.04382](https://arxiv.org/abs/1604.04382) (Related to PatchGAN concept)
