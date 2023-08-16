@@ -66,10 +66,11 @@ The GAN loss is a fundamental component in training the Generative Adversarial N
 
 2. **Generator Loss**: It guides the Generator to produce images that the Discriminator classifies as real.
 
+$$
    \[
    L_{\text{Generator}} = \mathbb{E}_{z \sim P_{z}}[\log (1 - D(G(z)))]
    \]
-
+$$
 The GAN loss ensures that the generated images are not only realistic but also indistinguishable from real images.
 
 ### Weighted L1 Loss
