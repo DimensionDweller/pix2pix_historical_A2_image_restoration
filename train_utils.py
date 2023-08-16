@@ -133,3 +133,18 @@ class ActivationStats(HooksCallback):
         axs[0].set_title('Means')
         axs[1].set_title('Stdevs')
         plt.legend(range(len(self.hooks)))
+
+
+def append_stats(module, inp, outp):
+  """
+    Appends statistics (mean and standard deviation) to the given module's stats attribute.
+
+    Args:
+        module (torch.nn.Module): Module to append stats to.
+        inp (torch.Tensor): Input tensor.
+        outp (torch.Tensor): Output tensor.
+    """
+    if not hasattr(module, 'stats'): module.stats = ([], [])
+    acts = outp.cpu()
+    module.stats[0].append(acts.mean().item())
+    module.stats[1].append(acts.std().item())
