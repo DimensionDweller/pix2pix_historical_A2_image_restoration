@@ -1,4 +1,4 @@
-Certainly! Here's the content in the requested format:
+Certainly! My apologies for the oversight. Here's the corrected content with the appropriate formatting:
 
 ### Loss Function
 
@@ -8,17 +8,17 @@ The model leverages a combination of losses:
 
 1. **Discriminator Loss**: It aims to classify the real and generated images correctly.
 
-   \[
+   $$
    L_{\text{Discriminator}} = \mathbb{E}_{x \sim P_{\text{real}}}[\log D(x)] + \mathbb{E}_{z \sim P_{z}}[\log (1 - D(G(z)))]
-   \]
+   $$
 
    where \( x \) are the real images, \( z \) are the noise samples, \( D \) is the Discriminator, and \( G \) is the Generator.
 
 2. **Generator Loss**: It guides the Generator to produce images that the Discriminator classifies as real.
 
-   \[
+   $$
    L_{\text{Generator}} = \mathbb{E}_{z \sim P_{z}}[\log (1 - D(G(z)))]
-   \]
+   $$
 
 The GAN loss ensures that the generated images are not only realistic but also indistinguishable from real images.
 
@@ -26,27 +26,27 @@ The GAN loss ensures that the generated images are not only realistic but also i
 
 1. **Standard L1 Loss**: Measures the absolute difference between the generated image and the real image.
 
-   \[
+   $$
    L_{\text{L1}} = \frac{1}{N} \sum_{i=1}^{N} |y_i - \hat{y}_i|
-   \]
+   $$
 
 2. **Luminance Preservation Loss**: Ensures that the brightness of the generated image matches the original grayscale image.
 
-   \[
+   $$
    L_{\text{luminance}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{Y}(y_i) - \text{Y}(\hat{y}_i) \right)^2
-   \]
+   $$
 
 3. **Color Preservation Loss**: Ensures that the color hues of the generated image are consistent with real color hues.
 
-   \[
+   $$
    L_{\text{color}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{CbCr}(y_i) - \text{CbCr}(\hat{y}_i) \right)^2
-   \]
+   $$
 
 The total weighted L1 loss is:
 
-   \[
+   $$
    L_{\text{weighted\_L1}} = L_{\text{L1}} + \lambda_{\text{luminance}} L_{\text{luminance}} + \lambda_{\text{color}} L_{\text{color}}
-   \]
+   $$
 
 The intricate design of these loss functions aids in achieving high-quality colorization, preserving original color properties, and maintaining brightness and contrast.
 
