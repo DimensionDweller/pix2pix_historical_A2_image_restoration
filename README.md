@@ -49,8 +49,6 @@ The UNet Generator is designed to retain spatial information, allowing high-qual
 
 The PatchGAN Discriminator focuses on local patches, making it sensitive to textures and details. It uses a series of convolutional layers to classify real and fake colorized images.
 
-Certainly! Here's an expanded explanation for the loss functions used in your project:
-
 ## Loss Function
 
 The model leverages a unique combination of losses to achieve realistic and high-quality colorization. The selection of these specific loss functions is crucial in capturing intricate details, preserving original textures, and maintaining color properties in the transformed images.
@@ -61,9 +59,9 @@ The GAN loss is a fundamental component in training the Generative Adversarial N
 
 1. **Discriminator Loss**: It aims to classify the real and generated images correctly.
 
-   \[
+   $$\[
    L_{\text{Discriminator}} = \mathbb{E}_{x \sim P_{\text{real}}}[\log D(x)] + \mathbb{E}_{z \sim P_{z}}[\log (1 - D(G(z)))]
-   \]
+   \]$$
 
    where \( x \) are the real images, \( z \) are the noise samples, \( D \) is the Discriminator, and \( G \) is the Generator.
 
