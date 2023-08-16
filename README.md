@@ -1,4 +1,4 @@
-Certainly! My apologies for the oversight. Here's the corrected content with the appropriate formatting:
+Certainly! Here's the corrected content with the `$$` signs around each equation:
 
 ### Loss Function
 
@@ -23,6 +23,8 @@ The model leverages a combination of losses:
 The GAN loss ensures that the generated images are not only realistic but also indistinguishable from real images.
 
 ### Weighted L1 Loss
+
+The weighted L1 loss is a specially designed loss for this project that combines different aspects of image quality.
 
 1. **Standard L1 Loss**: Measures the absolute difference between the generated image and the real image.
 
