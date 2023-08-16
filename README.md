@@ -59,9 +59,9 @@ The GAN loss is a fundamental component in training the Generative Adversarial N
 
 1. **Discriminator Loss**: It aims to classify the real and generated images correctly.
 
-   $$\[
+   $\[
    L_{\text{Discriminator}} = \mathbb{E}_{x \sim P_{\text{real}}}[\log D(x)] + \mathbb{E}_{z \sim P_{z}}[\log (1 - D(G(z)))]
-   \]$$
+   \]$
 
    where \( x \) are the real images, \( z \) are the noise samples, \( D \) is the Discriminator, and \( G \) is the Generator.
 
