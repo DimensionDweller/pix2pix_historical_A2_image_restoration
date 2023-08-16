@@ -1,24 +1,20 @@
-Certainly! Here's the corrected content with the `$$` signs around each equation:
+Thank you for sharing that information, Parker! It's wonderful that GitHub now supports LaTeX formatted math within Markdown, making it much easier to display mathematical expressions.
 
-### Loss Function
-
-The model leverages a combination of losses:
-
-#### GAN Loss
+Here are the updated equations using the new syntax:
 
 1. **Discriminator Loss**: It aims to classify the real and generated images correctly.
 
-   $$
+   \(\$
    L_{\text{Discriminator}} = \mathbb{E}_{x \sim P_{\text{real}}}[\log D(x)] + \mathbb{E}_{z \sim P_{z}}[\log (1 - D(G(z)))]
-   $$
+   \$\)
 
    where \( x \) are the real images, \( z \) are the noise samples, \( D \) is the Discriminator, and \( G \) is the Generator.
 
 2. **Generator Loss**: It guides the Generator to produce images that the Discriminator classifies as real.
 
-   $$
+   \(\$
    L_{\text{Generator}} = \mathbb{E}_{z \sim P_{z}}[\log (1 - D(G(z)))]
-   $$
+   \$\)
 
 The GAN loss ensures that the generated images are not only realistic but also indistinguishable from real images.
 
@@ -26,31 +22,39 @@ The GAN loss ensures that the generated images are not only realistic but also i
 
 The weighted L1 loss is a specially designed loss for this project that combines different aspects of image quality.
 
-1. **Standard L1 Loss**: Measures the absolute difference between the generated image and the real image.
+1. **Standard L1 Loss**: Measures the absolute difference between the generated image and the real image. It ensures that the generated image closely resembles the real one.
 
-   $$
+   \(\$
    L_{\text{L1}} = \frac{1}{N} \sum_{i=1}^{N} |y_i - \hat{y}_i|
-   $$
+   \$\)
 
-2. **Luminance Preservation Loss**: Ensures that the brightness of the generated image matches the original grayscale image.
+   where \( y_i \) is the real image and \( \hat{y}_i \) is the generated image.
 
-   $$
+2. **Luminance Preservation Loss**: Ensures that the brightness and contrast of the generated image match the original grayscale image.
+
+   \(\$
    L_{\text{luminance}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{Y}(y_i) - \text{Y}(\hat{y}_i) \right)^2
-   $$
+   \$\)
 
-3. **Color Preservation Loss**: Ensures that the color hues of the generated image are consistent with real color hues.
+   where \( \text{Y} \) represents the luminance channel.
 
-   $$
+3. **Color Preservation Loss**: Ensures that the color hues of the generated image are consistent with real color hues, preserving the natural appearance.
+
+   \(\$
    L_{\text{color}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{CbCr}(y_i) - \text{CbCr}(\hat{y}_i) \right)^2
-   $$
+   \$\)
 
-The total weighted L1 loss is:
+   where \( \text{CbCr} \) represents the chrominance channels.
 
-   $$
+The total weighted L1 loss is a combination of these components:
+
+   \(\$
    L_{\text{weighted\_L1}} = L_{\text{L1}} + \lambda_{\text{luminance}} L_{\text{luminance}} + \lambda_{\text{color}} L_{\text{color}}
-   $$
+   \$\)
 
-The intricate design of these loss functions aids in achieving high-quality colorization, preserving original color properties, and maintaining brightness and contrast.
+where \( \lambda_{\text{luminance}} \) and \( \lambda_{\text{color}} \) are the weighting factors.
+
+You can copy and paste these directly into your GitHub README, and they should render correctly! If you have any other questions or need further clarification, please let me know!
 
 
 # Historical Image Colorization using UNet Generator and PatchGAN Discriminator
