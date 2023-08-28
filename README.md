@@ -1,6 +1,6 @@
 # Historical Image Colorization using UNet Generator and PatchGAN Discriminator
 
-This project presents a novel approach to colorize grayscale images, employing a UNet Generator and PatchGAN Discriminator. Trained on both historical and modern grayscale images, the model can generate colorized versions of historical images of houses around Ann Arbor, Michigan, preserving intricate textures and details.
+This project presents a novel approach to colorize historical grayscale images, employing a UNet Generator and PatchGAN Discriminator. Trained on both historical and modern grayscale images, the model can generate colorized versions of historical images of houses around Ann Arbor, Michigan, preserving intricate textures and details.
 
 ## Table of Contents
 
