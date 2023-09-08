@@ -79,17 +79,18 @@ The weighted L1 loss is a specially designed loss for this project that combines
 
 2. **Luminance Preservation Loss**: Ensures that the brightness and contrast of the generated image match the original grayscale image.
 
-   $\( \lambda_{\text{luminance}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{Y}(y_i) - \text{Y}(\hat{y}_i) \right)^2$$
+   $$L_{\text{luminance}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{Y}(y_i) - \text{Y}(\hat{y}_i) \right)^2$$
 
 3. **Color Preservation Loss**: Ensures that the color hues of the generated image are consistent with real color hues, preserving the natural appearance.
 
    $$L_{\text{color}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{CbCr}(y_i) - \text{CbCr}(\hat{y}_i) \right)^2$$
 
-where $\( \lambda_{\text{luminance}} \)$ and $\( \lambda_{\text{color}} \)$ are the weighting factors.
 
 The total weighted L1 loss is:
 
 $$L_{\text{weighted L1}} = L_{\text{L1}} + \lambda_{\text{luminance}} L_{\text{luminance}} + \lambda_{\text{color}} L_{\text{color}}$$
+
+where $\( \lambda_{\text{luminance}} \)$ and $\( \lambda_{\text{color}} \)$ are the weighting factors.
 
 
 The intricate design of these loss functions aids in achieving high-quality colorization. The GAN loss ensures realistic rendering, while the weighted L1 loss focuses on maintaining the essence of the original image, including luminance and color properties. This combination of losses is essential for achieving the desired balance between realism and authenticity in the generated images, making it tailored for this specific project.
