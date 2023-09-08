@@ -79,7 +79,7 @@ The weighted L1 loss is a specially designed loss for this project that combines
 
 2. **Luminance Preservation Loss**: Ensures that the brightness and contrast of the generated image match the original grayscale image.
 
-   $$L_{\text{luminance}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{Y}(y_i) - \text{Y}(\hat{y}_i) \right)^2$$
+   $\( \lambda_{\text{luminance}} = \frac{1}{N} \sum_{i=1}^{N} \left( \text{Y}(y_i) - \text{Y}(\hat{y}_i) \right)^2$$
 
 3. **Color Preservation Loss**: Ensures that the color hues of the generated image are consistent with real color hues, preserving the natural appearance.
 
