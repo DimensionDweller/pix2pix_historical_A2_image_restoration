@@ -95,38 +95,6 @@ where $\( \lambda_{\text{luminance}} \)$ and $\( \lambda_{\text{color}} \)$ are 
 
 The intricate design of these loss functions aids in achieving high-quality colorization. The GAN loss ensures realistic rendering, while the weighted L1 loss focuses on maintaining the essence of the original image, including luminance and color properties. This combination of losses is essential for achieving the desired balance between realism and authenticity in the generated images, making it tailored for this specific project.
 
-## Results
-
-(Include some generated images or a link to a demonstration, showcasing the results.)
-
-## Usage
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YourUsername/ImageColorization.git
-```
-
-Navigate to the directory:
-
-```bash
-cd ImageColorization
-```
-
-Install required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the training script:
-
-```bash
-python main.py
-```
-
-You can customize hyperparameters in the `main.py` file.
-
 ## Future Work and Conclusion
 
 This project presents a novel approach to grayscale image colorization using deep learning, demonstrating promising results. The unique combination of the UNet Generator, PatchGAN Discriminator, and specialized loss functions offers a robust model capable of handling various grayscale images.
