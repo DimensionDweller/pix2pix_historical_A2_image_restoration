@@ -95,6 +95,10 @@ where $\( \lambda_{\text{luminance}} \)$ and $\( \lambda_{\text{color}} \)$ are 
 
 The intricate design of these loss functions aids in achieving high-quality colorization. The GAN loss ensures realistic rendering, while the weighted L1 loss focuses on maintaining the essence of the original image, including luminance and color properties. This combination of losses is essential for achieving the desired balance between realism and authenticity in the generated images, making it tailored for this specific project.
 
+## Results
+
+![Visualized Images Grid](https://github.com/parkermoe/pix2pix_historical_A2_image_restoration/blob/main/visualized_images_grid.png?raw=true)
+
 ## Future Work and Conclusion
 
 This project presents a novel approach to grayscale image colorization using deep learning, demonstrating promising results. The unique combination of the UNet Generator, PatchGAN Discriminator, and specialized loss functions offers a robust model capable of handling various grayscale images.
