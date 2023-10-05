@@ -8,7 +8,6 @@ This project presents a novel approach to colorize historical grayscale images, 
 - [Project Description](#project-description)
 - [Model Architecture](#model-architecture)
 - [Results](#results)
-- [Usage](#usage)
 - [Future Work](#future-work)
 - [Sources](#sources)
 
