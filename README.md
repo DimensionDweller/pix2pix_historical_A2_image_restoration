@@ -50,7 +50,7 @@ The PatchGAN Discriminator focuses on local patches, making it sensitive to text
 
 ## Loss Function
 
-The model leverages a unique combination of losses to achieve realistic and high-quality colorization. The selection of these specific loss functions is crucial in capturing intricate details, preserving original textures, and maintaining color properties in the transformed images.
+My model leverages a unique combination of losses to achieve realistic and high-quality colorization. The selection of these specific loss functions is crucial in capturing intricate details, preserving original textures, and maintaining color properties in the transformed images.
 
 ### GAN Loss
 
