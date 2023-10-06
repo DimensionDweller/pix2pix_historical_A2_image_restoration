@@ -100,7 +100,7 @@ The intricate design of these loss functions aids in achieving high-quality colo
 
 ## Future Work and Conclusion
 
-This project presents a novel approach to grayscale image colorization using deep learning, demonstrating promising results. The unique combination of the UNet Generator, PatchGAN Discriminator, and specialized loss functions offers a robust model capable of handling various grayscale images.
+In all, this project presents a novel approach to grayscale image colorization using deep learning, demonstrating promising results. The unique combination of the UNet Generator, PatchGAN Discriminator, and specialized loss functions offers a robust model capable of handling various grayscale images and worthy of further exploration in terms of model architecture.
 
 Future work may include:
 
